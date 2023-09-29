@@ -24,9 +24,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 activeVideo = video4; 
             } else if (activeVideo === video4) { 
                 video4.style.display = "none";
+                video5.style.display = "block"; 
+                activeVideo = video5; 
+            } else if (activeVideo === video5) { 
+                video5.style.display = "none";
                 video1.style.display = "block";
                 activeVideo = video1;
-            }
+            } 
         }
 
         isScrolling = true;
