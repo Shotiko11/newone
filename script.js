@@ -1,8 +1,3 @@
-const THREE = require('three');
-import * as THREE from 'three'; 
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
     let video1 = document.getElementById("background-video");
     let video2 = document.getElementById("second-video");
@@ -102,18 +97,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
-
-const majorRadius = 5;
-const minorRadius = 1;
-const radialSegments = 32;
-const tubularSegments = 12;
-
-const torusGeometry = new THREE.TorusGeometry(majorRadius, minorRadius, radialSegments, tubularSegments);
-
-const material = new THREE.MeshPhongMaterial({ color: 0x00ff00 });
-
-const torusMesh = new THREE.Mesh(torusGeometry, material);
-
-scene.add(torusMesh);
-
