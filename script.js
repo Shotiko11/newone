@@ -104,24 +104,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-const container = document.getElementById('model-container');
+const majorRadius = 5;
+const minorRadius = 1;
+const radialSegments = 32;
+const tubularSegments = 12;
 
-const scene = new THREE.Scene();
+const torusGeometry = new THREE.TorusGeometry(majorRadius, minorRadius, radialSegments, tubularSegments);
 
-const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
-camera.position.z = 5;
+const material = new THREE.MeshPhongMaterial({ color: 0x00ff00 });
 
-const renderer = new THREE.WebGLRenderer();
-renderer.setSize(container.clientWidth, container.clientHeight);
-container.appendChild(renderer.domElement);
+const torusMesh = new THREE.Mesh(torusGeometry, material);
 
-const loader = new THREE.GLTFLoader();
-loader.load('path/to/your/model.gltf', (gltf) => {
-  scene.add(gltf.scene);
-  animate();
-});
+scene.add(torusMesh);
 
-function animate() {
-  requestAnimationFrame(animate);
-  renderer.render(scene, camera);
-}
