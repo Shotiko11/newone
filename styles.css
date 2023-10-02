@@ -18,7 +18,7 @@ body {
 
 .site-header {
     position: absolute;
-    top: 40px;
+    top: 40px; /* Added a margin of 40px from the top */
     left: 0;
     width: 100%;
     display: flex;
@@ -65,4 +65,10 @@ a {
 
 a:hover {
     font-weight: bold;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
 }

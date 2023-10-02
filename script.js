@@ -1,3 +1,8 @@
+const THREE = require('three');
+import * as THREE from 'three'; 
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     let video1 = document.getElementById("background-video");
     let video2 = document.getElementById("second-video");
